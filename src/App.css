@@ -40,7 +40,7 @@ h1 {
   width: fit-content;
 }
 
-.search {
+.search, .navicon {
   width: 71%;
   margin: 4rem 0 2rem;
   display: flex;
