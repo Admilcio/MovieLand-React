@@ -4,7 +4,8 @@ import './App.css';
 import searchIcon from "./search.svg";  
 import MovieCard from "./movieCard.jsx";
 import Sidebar from './Components/Sidebar.jsx';
-import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import Overview from './pages/Overview.jsx';
 
 const API_URL = 'http://www.omdbapi.com?apikey=eb00ab6e';
 
@@ -25,6 +26,12 @@ function App() {
 
   return (
     <div className="app">
+         <Router>
+        <Sidebar />
+        <Routes>
+          <Route path="/overview" element={<Overview />} />
+        </Routes>
+      </Router>
       <h1>MovieLand</h1>
       <div className="search">
         <input 
@@ -49,11 +56,7 @@ function App() {
         </div>
         ) : (
           <p className='empty'>No movies found!</p>
-      ) }
-      <Router>
-        <Sidebar />
-      </Router>
-      
+      )}
     </div>
   );
 }

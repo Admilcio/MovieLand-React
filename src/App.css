@@ -19,12 +19,12 @@ body {
 
 .app {
   padding: 4rem;
-
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
 }
+
 
 h1 {
   font-size: 3rem;
@@ -40,7 +40,7 @@ h1 {
   width: fit-content;
 }
 
-.search, .navicon {
+.search {
   width: 71%;
   margin: 4rem 0 2rem;
   display: flex;
