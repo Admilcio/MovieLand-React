@@ -28,7 +28,6 @@ body {
   flex-direction: column;
 }
 
-
 h1 {
   font-size: 3rem;
   letter-spacing: 0.9px;
@@ -73,7 +72,33 @@ h1 {
   height: 35px;
   cursor: pointer;
 }
+.display-movie {
+  width: 100%;
+  margin-top: 3rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
 
+.display-movie .watch-now {
+  padding: 6px 40px;
+  border-radius: 0.5rem;
+  margin: 10px;
+  color: #a1a1a1;
+  font-family: var(--font-raleway);
+  letter-spacing: 0.75px;
+  font-size: 1.25rem;
+  cursor: pointer;
+  background: #1f2123;
+}
+.display-movie .watch-now:hover {
+  background: #c4ab97;
+  color: #1f2123;
+  transition: all 0.3s ease-in-out;
+  -webkit-box-shadow: 5px 5px 7px #1c1d1f, -5px -5px 7px #222527;
+  box-shadow: 2px 2px 3px #6c6e72, 0px 0px 7px #222527;
+}
 /* .search button {
   padding: 20px 40px;
   border-radius: 0.5rem;
@@ -110,6 +135,7 @@ h1 {
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
+  z-index: 10;
 }
 
 .movie {
@@ -176,7 +202,7 @@ h1 {
 
 .movie:hover div:nth-of-type(2) {
   height: 100%;
-  opacity: 0.3;
+  opacity: 0.8;
 }
 
 .movie:hover div:nth-of-type(3) {
@@ -205,6 +231,9 @@ h1 {
     width: 20px;
     height: 20px;
   }
+  .container {
+    margin-left: 100px;
+  }
 }
 
 @media screen and (max-width: 400px) {
@@ -218,6 +247,7 @@ h1 {
 
   .container {
     margin-top: 2rem;
+    margin-left: 100px;
   }
 
   .movie {

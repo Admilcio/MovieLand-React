@@ -2,9 +2,9 @@ import {useState} from 'react';
 import {useEffect} from 'react';
 import './App.css';
 import searchIcon from "./search.svg";  
-import MovieCard from "./movieCard.jsx";
+import MovieCard from "./Components/movieCard.jsx";
 import Sidebar from './Components/Sidebar.jsx';
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import { BrowserRouter, Route, Routes} from 'react-router-dom';
 import Overview from './pages/Overview.jsx';
 
 const API_URL = 'http://www.omdbapi.com?apikey=eb00ab6e';
@@ -26,12 +26,12 @@ function App() {
 
   return (
     <div className="app">
-         <Router>
+   <BrowserRouter>
         <Sidebar />
         <Routes>
           <Route path="/overview" element={<Overview />} />
         </Routes>
-      </Router>
+      </BrowserRouter>
       <h1>MovieLand</h1>
       <div className="search">
         <input 
