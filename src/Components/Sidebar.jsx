@@ -20,7 +20,6 @@ const Nav = styled.div`
   @media screen and (max-width: 738px) {
     display:none;
   }
-  
 `;
 
 const DisplayNavItems = styled.div`
@@ -39,6 +38,9 @@ const NavIcon = styled(Link)`
   justify-content: flex-start;
   align-items: center;
   padding: 0 1rem;
+  @media screen and (max-width: 738px) {
+    left: 50px;
+  }
 `;
 
 const SidebarNav = styled.nav`
@@ -56,6 +58,7 @@ const SidebarNav = styled.nav`
   @media screen and (max-width: 738px) {
     display: flex;
     left: 0;
+    width: 150px;
   }
 `;
 
